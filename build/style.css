@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  font-family: "Abel", sans-serif;
+  color: #551A8B;
+  line-height: 1.5em;
+}
+
+.container {
+  display: flex;
+  width: 940px;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  min-height: 512px;
+  padding: 100px 0px;
+  background-image: linear-gradient(90deg, #7F2F4A 10%, #384C85 90%);
+  color: #FFFFFF;
+}
+
+.about {
+  min-height: 512px;
+  padding: 100px 0px;
+}
+
+.apps1 {
+  min-height: 512px;
+  padding: 100px 0px;
+  background-image: url("images/apps1.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.apps2 {
+  min-height: 512px;
+  padding: 100px 0px;
+  background-image: url("images/apps2.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style.css.map */

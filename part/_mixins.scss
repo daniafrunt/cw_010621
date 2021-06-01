@@ -1,0 +1,13 @@
+@mixin section($height) {
+    min-height: $height;
+    padding: 100px 0px;
+}
+
+@mixin section__picture($url) {
+    background: {
+        image: url($url);
+        repeat: no-repeat;
+        position: center top;
+        size: cover;
+    }
+}
