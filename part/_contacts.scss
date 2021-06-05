@@ -1,0 +1,37 @@
+.contacts {
+    @include section(512px);
+    h2 {
+        margin-bottom: 25px;
+    }
+    .container {
+        justify-content: space-between;
+    }
+    &__par1 {
+        width: 75%;
+        p {
+            color: $color__blue;
+        }
+    }    
+    &__par2 {
+        width: 25%;
+        p {
+            color: $color__bordo;
+        }
+    }
+    @media screen and(max-width: $wid__tablet) {
+        .contacts__par1, .contacts__par2 {
+            width: 45%;
+        }
+    }
+    @media screen and(max-width: $wid__phone) {
+        .contacts__par1, .contacts__par2 {
+            width: 100%;
+        }
+        &__par1 {
+            margin-bottom: 50px;
+        }
+        .container {
+            flex-direction: column;
+        }
+    }
+}

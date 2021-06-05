@@ -1,5 +1,43 @@
 .apps2 {
     @include section(512px);
     @include section__picture('images/apps2.jpg');
+    position: relative;
     color: $color__white;
+    .container {
+        justify-content: flex-end;
+    }
+    &__par {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        p {
+            margin: 15px 0px;
+        }
+    }
+    .learnmore {
+        @include learnmore;
+        padding: 10px 35px;
+        max-width: 300px;
+        width: 80%;
+        text-align: center;
+        a {
+            display: block;
+        }
+    }
+    @media screen and(max-width: $wid__tablet) {
+        .container {
+            justify-content: center;
+            text-align: center;
+        }
+        &__par {
+            width: 70%;
+            align-items: center;
+        }
+        .learnmore {
+            width: 80%;
+        }
+    }
+    @media screen and(max-width: $wid__phone) {
+        display: none;
+    }
 }

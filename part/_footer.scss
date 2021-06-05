@@ -1,0 +1,29 @@
+.footer {
+    @include section(231px);
+    background: {
+        color: $color__blue;
+    }
+    color: $color__white;
+    text-align: center;
+    .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .backtotop {
+        width: fit-content;
+        padding: 10px 30px;
+        border: solid 1px $color__white;
+        border-radius: 5px;
+    }
+}
+
+@media screen and(max-width: $wid__tablet) {
+    .footer .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & * {
+            margin-top: 40px;
+        }
+    }
+}

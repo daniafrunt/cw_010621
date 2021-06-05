@@ -13,11 +13,13 @@ body {
     }
     color: $color__purple;
     line-height: 1.5em;
+    letter-spacing: 0.1em;
 }
 
 .container {
     display: flex;
-    width: 940px;
+    width: 90%;
+    max-width: 940px;
     margin: 0px auto;
 }
 
@@ -26,4 +28,16 @@ a {
         decoration: none;
     }
     color: inherit;
+}
+
+@media screen and(max-width: $wid__tablet) {
+    .container {
+        max-width: 648px;
+    }
+}
+
+@media screen and(max-width: $wid__phone) {
+    .container {
+        max-width: 384px;
+    }
 }

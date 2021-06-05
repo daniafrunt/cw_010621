@@ -1,40 +1,107 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
-
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font-size: 24px;
   font-family: "Abel", sans-serif;
   color: #551A8B;
   line-height: 1.5em;
-}
+  letter-spacing: 0.1em; }
 
 .container {
   display: flex;
-  width: 940px;
-  margin: 0px auto;
-}
+  width: 90%;
+  max-width: 940px;
+  margin: 0px auto; }
 
 a {
   text-decoration: none;
-  color: inherit;
-}
+  color: inherit; }
 
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 648px; } }
+@media screen and (max-width: 520px) {
+  .container {
+    max-width: 384px; } }
 .header {
   min-height: 512px;
   padding: 100px 0px;
   background-image: linear-gradient(90deg, #7F2F4A 10%, #384C85 90%);
-  color: #FFFFFF;
-}
+  color: #FFFFFF; }
+  .header .container {
+    flex-direction: column; }
+    .header .container .header__links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      text-transform: uppercase; }
+      .header .container .header__links .header__link {
+        margin: 0px 20px; }
+        .header .container .header__links .header__link a {
+          display: block; }
+        .header .container .header__links .header__link::after {
+          content: '';
+          display: block;
+          width: inherit;
+          border: solid 1px #FFFFFF;
+          transform: scaleX(0);
+          transition-property: transform;
+          transition-duration: .5s; }
+        .header .container .header__links .header__link:hover::after {
+          transform: scaleX(1); }
+  .header__navigation {
+    display: flex;
+    padding-bottom: 70px;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: solid 1px #FFFFFF; }
+  .header__slogan {
+    width: 100%;
+    margin-top: 40px;
+    text-align: justify;
+    line-height: 2em; }
+  @media screen and (max-width: 768px) {
+    .header .header__links {
+      justify-content: center; }
+    .header .header__navigation {
+      flex-direction: column;
+      border: none; }
+    .header .header__slogan {
+      text-align: center;
+      margin: 200px auto; }
+    .header .header__logo {
+      width: 100%;
+      border-bottom: solid 1px #FFFFFF;
+      padding-bottom: 45px;
+      margin-bottom: 15px; } }
+  @media screen and (max-width: 520px) {
+    .header .header__link, .header .header__links {
+      display: none; } }
 
 .about {
   min-height: 512px;
-  padding: 100px 0px;
-}
+  padding: 100px 0px; }
+  .about .container {
+    justify-content: space-between; }
+    .about .container .paragraph {
+      width: 40%; }
+      .about .container .paragraph h2 {
+        margin-bottom: 25px; }
+  @media screen and (max-width: 768px) {
+    .about .paragraph {
+      width: 45%; } }
+  @media screen and (max-width: 520px) {
+    .about .container {
+      flex-direction: column; }
+    .about .paragraph {
+      width: 90%; }
+    .about .par1 {
+      padding-bottom: 65px; } }
 
 .apps1 {
   min-height: 512px;
@@ -43,8 +110,37 @@ a {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  color: #FFFFFF;
-}
+  position: relative;
+  color: #FFFFFF; }
+  .apps1 .container {
+    justify-content: flex-end; }
+  .apps1__par {
+    display: flex;
+    width: 40%;
+    flex-direction: column; }
+    .apps1__par p {
+      margin: 15px 0px; }
+  .apps1 .learnmore {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 35px;
+    max-width: 300px;
+    width: 80%;
+    text-align: center; }
+    .apps1 .learnmore a {
+      display: block; }
+  @media screen and (max-width: 768px) {
+    .apps1 .container {
+      justify-content: center;
+      text-align: center; }
+    .apps1__par {
+      width: 70%;
+      align-items: center; }
+    .apps1 .learnmore {
+      width: 80%; } }
+  @media screen and (max-width: 520px) {
+    .apps1__par {
+      width: 80%; } }
 
 .apps2 {
   min-height: 512px;
@@ -53,7 +149,85 @@ a {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  position: relative;
+  color: #FFFFFF; }
+  .apps2 .container {
+    justify-content: flex-end; }
+  .apps2__par {
+    display: flex;
+    width: 40%;
+    flex-direction: column; }
+    .apps2__par p {
+      margin: 15px 0px; }
+  .apps2 .learnmore {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 35px;
+    max-width: 300px;
+    width: 80%;
+    text-align: center; }
+    .apps2 .learnmore a {
+      display: block; }
+  @media screen and (max-width: 768px) {
+    .apps2 .container {
+      justify-content: center;
+      text-align: center; }
+    .apps2__par {
+      width: 70%;
+      align-items: center; }
+    .apps2 .learnmore {
+      width: 80%; } }
+  @media screen and (max-width: 520px) {
+    .apps2 {
+      display: none; } }
+
+.contacts {
+  min-height: 512px;
+  padding: 100px 0px; }
+  .contacts h2 {
+    margin-bottom: 25px; }
+  .contacts .container {
+    justify-content: space-between; }
+  .contacts__par1 {
+    width: 75%; }
+    .contacts__par1 p {
+      color: #384C85; }
+  .contacts__par2 {
+    width: 25%; }
+    .contacts__par2 p {
+      color: #7F2F4A; }
+  @media screen and (max-width: 768px) {
+    .contacts .contacts__par1, .contacts .contacts__par2 {
+      width: 45%; } }
+  @media screen and (max-width: 520px) {
+    .contacts .contacts__par1, .contacts .contacts__par2 {
+      width: 100%; }
+    .contacts__par1 {
+      margin-bottom: 50px; }
+    .contacts .container {
+      flex-direction: column; } }
+
+.footer {
+  min-height: 231px;
+  padding: 100px 0px;
+  background-color: #384C85;
   color: #FFFFFF;
-}
+  text-align: center; }
+  .footer .container {
+    justify-content: space-between;
+    align-items: center; }
+  .footer .backtotop {
+    width: fit-content;
+    padding: 10px 30px;
+    border: solid 1px #FFFFFF;
+    border-radius: 5px; }
+
+@media screen and (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer .container * {
+      margin-top: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
