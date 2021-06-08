@@ -4,22 +4,22 @@
         justify-content: space-between;
         .paragraph {
             width: 40%;
+            @media screen and (max-width: $wid__phone) {
+                width: 95%;
+            }
             h2 {
                 margin-bottom: 25px;
             }
         }
     }
-    @media screen and(max-width: $wid__tablet) {
+    @media screen and (max-width: $wid__tablet) {
         .paragraph {
             width: 45%;
         }
     }
-    @media screen and(max-width: $wid__phone) {
+    @media screen and (max-width: $wid__phone) {
         .container {
             flex-direction: column;
-        }
-        .paragraph {
-            width: 90%;
         }
         .par1 {
             padding-bottom: 65px;

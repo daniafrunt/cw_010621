@@ -90,6 +90,9 @@ a {
     justify-content: space-between; }
     .about .container .paragraph {
       width: 40%; }
+      @media screen and (max-width: 520px) {
+        .about .container .paragraph {
+          width: 95%; } }
       .about .container .paragraph h2 {
         margin-bottom: 25px; }
   @media screen and (max-width: 768px) {
@@ -98,8 +101,6 @@ a {
   @media screen and (max-width: 520px) {
     .about .container {
       flex-direction: column; }
-    .about .paragraph {
-      width: 90%; }
     .about .par1 {
       padding-bottom: 65px; } }
 
@@ -189,7 +190,7 @@ a {
   .contacts .container {
     justify-content: space-between; }
   .contacts__par1 {
-    width: 75%; }
+    width: 65%; }
     .contacts__par1 p {
       color: #384C85; }
   .contacts__par2 {
